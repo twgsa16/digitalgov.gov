@@ -1,0 +1,32 @@
+{{ define "pagevars" }}
+  {{ $.Scratch.Set "bodyclasses" "top post-template-default single single-post postid-387118 single-format-standard tribe-js c-sw unboxed centercatnav bodybg1 fwidth" }}
+{{ end }}
+
+{{ define "content" }}
+
+<div id="contentleft" class="clearfix">
+  <div id="content" class="clearfix">
+
+
+    
+
+
+
+    <h2>Resources ({{ len (where .Site.Pages "Section" "=" "resources") }})</h2>
+    {{ $resources := where .Site.Pages "Section" "resources" }}
+    {{ range $resources }}
+      <p><a href="{{ .URL }}" rel="bookmark">{{ .Title | markdownify }}</a><br/>{{ .URL }}</p>
+    {{ end }}
+
+    <h2>Services ({{ len (where .Site.Pages "Section" "=" "services") }})</h2>
+    {{ $services := where .Site.Pages "Section" "services" }}
+    {{ range $services }}
+      <p><a href="{{ .URL }}" rel="bookmark">{{ .Title | markdownify }}</a><br/>{{ .URL }}</p>
+    {{ end }}
+
+
+
+
+  </div><!-- #content -->
+</div><!-- #contentleft -->
+{{ end }} {{/* end 'content' block */}}

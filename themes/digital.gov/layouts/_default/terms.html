@@ -36,6 +36,15 @@
         {{ end }}
       {{ end }}
 
+      <pre>
+        {{ range $tag, $title := index $data $.Data.Plural }}
+          {{ $link := printf "%s/%s/" $.Data.Plural $tag }}
+          {{ range $page := first 1 (where $.Data.Terms.Alphabetical ".Name" $tag ) }}
+            {{ $title.display_name }}, {{ $page.Count }}, {{ $link | absURL }}
+          {{ end }}
+        {{ end }}
+      </pre>
+
     {{ end }}
   </ul>
 {{ end }}
