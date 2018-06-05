@@ -1,0 +1,26 @@
+{{ define "pagevars" }}
+  {{ $.Scratch.Set "bodyclasses" "top archive post-type-archive post-type-archive-tribe_events tribe-js tribe-filter-live c-sw unboxed centercatnav bodybg1 events-list events-archive tribe-events-style-full tribe-events-style-theme tribe-theme-wp-enlightened tribe-events-page-template tribe-is-responsive" }}
+{{ end }}
+
+{{ define "content" }}
+
+<section id="resources">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="resources-list">
+          <div class="events-head">
+            <h1>All Resources</h1>
+          </div>
+          {{ range .Data.Pages }}
+            {{ .Render "li"}}
+          {{ end }}
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

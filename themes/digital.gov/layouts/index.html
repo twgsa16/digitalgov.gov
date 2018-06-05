@@ -7,9 +7,64 @@
 <div id="widgetized-page" class="clearfix">
   <div class="page-widget-wide top clearfix">
 
-    {{ partial "body-latest-news.html" . }}
+    <h2>Resources</h2>
+    {{ $resources := where .Site.Pages "Section" "resources" }}
+    {{ range $resources }}
+      <p><a href="{{ .URL }}" rel="bookmark">"{{ .Title | markdownify }}"</a></p>
+    {{ end }}
+    <pre>{{- range $resources -}}
+      $$$
+      "{{ .Title | markdownify }}", {{ .URL }}, "{{ .Summary }}", {{ .Date }}
+      ***
+    {{- end -}}</pre>
+
+    <h2>Services</h2>
+    {{ $services := where .Site.Pages "Section" "services" }}
+    {{ range $services }}
+      <p><a href="{{ .URL }}" rel="bookmark">"{{ .Title | markdownify }}"</a></p>
+    {{ end }}
+    <pre>{{- range $services -}}
+      $$$
+      "{{ .Title | markdownify }}", {{ .URL }}, "{{ .Summary }}", {{ .Date }}
+      ***
+    {{- end -}}</pre>
+
+    <h2>Communities</h2>
+    {{ $communities := where .Site.Pages "Section" "communities" }}
+    {{ range $communities }}
+      <p><a href="{{ .URL }}" rel="bookmark">"{{ .Title | markdownify }}"</a></p>
+    {{ end }}
+    <pre>{{- range $communities -}}
+      $$$
+      "{{ .Title | markdownify }}", {{ .URL }}, "{{ .Summary }}", {{ .Date }}
+      ***
+    {{- end -}}</pre>
+
+    <h2>Pages</h2>
+    {{ $pages := where .Site.Pages "Section" "pages" }}
+    {{ range $pages }}
+      <p><a href="{{ .URL }}" rel="bookmark">"{{ .Title | markdownify }}"</a></p>
+    {{ end }}
+    <pre>
+    {{ range $pages }}
+      $$$
+      "{{ .Title | markdownify }}", {{ .URL }}, "{{ .Summary }}", {{ .Date }}
+      ***
+    {{ end }}
+    </pre>
+
+    <h2>Etc</h2>
+    {{ $etc := where .Site.Pages "Section" "etc" }}
+    {{ range $etc }}
+      <p><a href="{{ .URL }}" rel="bookmark">"{{ .Title | markdownify }}"</a></p>
+    {{ end }}
+    <pre>{{- range $etc -}}
+      "{{ .Title | markdownify }}", {{ .URL }}, "{{ .Summary }}", {{ .Date }}
+    {{- end -}}</pre>
+
+    <!-- {{ partial "body-latest-news.html" . }} -->
     <!-- {{ partial "body-latest-events.html" . }} -->
-    {{ partial "body-featured-events.html" . }}
+    <!-- {{ partial "body-featured-events.html" . }} -->
     <!-- {{ partial "body-featured.html" . }} -->
 
   </div><!-- /div.page-widget-wide -->

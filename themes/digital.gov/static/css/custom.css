@@ -11,6 +11,10 @@ style.css to this file, and modify it as you like.
 ---------------------------------------------------------------------------------
 Add styles beneath this line that you want to be applied across your entire site */
 
+pre{
+	background: #efefef;
+}
+
 #wrap {
 	margin-top: 32px;
 }
