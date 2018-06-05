@@ -17,13 +17,25 @@
           {{ $link := printf "authors/%s/" $uid }}
           <li><a href="{{ $link | absURL }}">{{ $author.display_name | default $uid }} ({{ $tax.Count }})</li>
       {{ end }}
+
+      <pre>
+        {{ range $tax := $.Data.Terms.Alphabetical }}
+          {{ $uid := $tax.Name | urlize }}
+          {{ $author := index $data.people.authors $uid }}
+            {{ $link := printf "authors/%s/" $uid }}
+            {{ $author.display_name | default $uid }}, {{ $tax.Count }}, {{ $link | absURL }}
+        {{ end }}
+      </pre>
     {{ else }}
+
+      <!-- tags & categories -->
       {{ range $tag, $title := index $data $.Data.Plural }}
         {{ $link := printf "%s/%s/" $.Data.Plural $tag }}
         {{ range $page := first 1 (where $.Data.Terms.Alphabetical ".Name" $tag ) }}
           <li><a href="{{ $link | absURL }}">{{ $title.display_name }} ({{ $page.Count }})</li>
         {{ end }}
       {{ end }}
+
     {{ end }}
   </ul>
 {{ end }}
