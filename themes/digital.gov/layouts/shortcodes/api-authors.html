@@ -6,12 +6,12 @@
     "type" : "list",
     "title" : "Authors | {{ .Site.Title }}",
     "home_page_url" : "{{- .Site.BaseURL -}}",
-    "count" : "{{- $length -}}",
+    "count" : "{{- $length }}",
     {{- with .Site.Author.name -}}
     "author" : {
-        "name" : "{{- . -}}"{{- with $.Site.Author.url -}},
-        "url": "{{- . -}}"{{- end -}}{{- with $.Site.Author.avatar -}},
-        "avatar": "{{- . | absURL -}}"{{- end -}}
+      "name" : "{{- . -}}"{{- with $.Site.Author.url -}},
+      "url": "{{- . -}}"{{- end -}}{{- with $.Site.Author.avatar -}},
+      "avatar": "{{- . | absURL -}}"{{- end -}}
     },
     {{- end -}}
     "items" : [
