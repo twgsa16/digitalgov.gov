@@ -28,6 +28,7 @@ sitemap:
   priority              : 0.5
   filename              : "sitemap.xml"
 
+
 outputFormats:
   SiteImages:
     mediaType: "application/json"
@@ -69,9 +70,7 @@ permalinks:
 
 preserveTaxonomyNames   : true
 taxonomies:
-  tag                   : "tag"
   topic                 : "topics"
-  category              : "categories"
   author                : "authors"
 
 pluralizelisttitles     : false
