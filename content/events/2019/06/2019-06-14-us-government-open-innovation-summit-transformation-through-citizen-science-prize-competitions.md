@@ -22,9 +22,13 @@ _[View live captioning for this event](https://www.captionedtext.com/client/even
 
 {{< img src="open-innovation-summit-lockup" >}}
 
-Join innovators from across the public and private sectors for an event designed to highlight the potentialities and impact of crowdsourcing through citizen science and prize competitions in the U.S. government.
+On June 14, the General Services Administration and White House Office of Science and Technology Policy (OSTP) hosted innovators from the public and private sectors to highlight the potential and impact of crowdsourcing through citizen science and prize competitions in the U.S. government.
 
-Speakers, panels, and interactive events will explore the use of these approaches to innovation, the opportunities and benefits they offer, and hurdles faced in integrating them into existing federal agency processes. This event will complement an upcoming crowdsourcing report to Congress that details how prize competitions and citizen science are transforming government.
+The inaugural U.S. Open Innovation Summit featured a keynote speech from OSTP Director Dr. Kelvin Droegemeier, who announced the release of a new report on prize competitions and citizen science projects run by the federal government during 2017-2018.
+The event featured a variety of presentations, panel discussions and interactive events that explored the use of these approaches, the opportunities and benefits they offer, and challenges integrating them into existing federal agency processes.
+
+- Download the Implementation of Federal Prize and Citizen Science Authority Fiscal Years 2017 and 2018 report.
+- Review speaker presentations and slides from the event.
 
 ---
 
